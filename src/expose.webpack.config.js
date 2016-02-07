@@ -1,7 +1,7 @@
 import partial from 'webpack-partial';
 import resolve from 'resolve';
 
-export default (expose = []) => (config) => partial(config, {
+export default (expose = {}) => (config) => partial(config, {
   module: {
     loaders: Object.keys(expose).map((module) => {
       return {
